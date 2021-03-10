@@ -1,0 +1,134 @@
+/*section carousel*/
+.carousel{
+  margin-bottom: 40px;
+}
+
+.zonetextcarousel{
+  font-size:1.6em;
+  margin-bottom: 20%;
+  letter-spacing: 0.2em;
+  word-spacing: 0.1em;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.slider-p{
+  margin-bottom: 40px;
+}
+
+.titretextcarousel{
+  background-color:rgba(0,0,0,0.4);
+  padding: 8px;
+  padding-left: 25px;
+  padding-right: 25px;
+  letter-spacing: 2px;
+}
+
+/*Texte grand dans carousel*/
+.titretextcarousel{
+  font-size:2.1em;
+}
+
+/*flèches du carousel*/
+
+.carousel-control-prev, .carousel-control-next{
+  opacity:1;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover{
+  opacity:0.8;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon { 
+    height: 9em; 
+    width: 9em;
+    padding-top: 10% !important;
+} 
+
+.carousel-control-prev-icon {
+  background-image: url("../img/slider/previous-slider.png") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("../img/slider/next-slider.png") !important;
+}
+
+.button-slider{
+  background-color: #012169;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+
+.button-slider:hover{
+  background-color: #011C5A;
+
+}
+
+button.button-slider a{
+   color: white !important;
+}
+
+button.button-slider a:hover{
+   color: white !important;
+   text-decoration: none;
+}
+
+@media (max-width: 1400px){
+  .zonetextcarousel{
+    margin-bottom: 15%;
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon { 
+    height: 7em; 
+    width: 7em;
+  } 
+}
+
+@media (max-width: 1145px){
+  .zonetextcarousel{
+    font-size: 1.2em;
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon { 
+    height: 6em; 
+    width: 6em;
+  } 
+
+  .carousel{
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 935px){
+
+  .slider-p{
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+
+  .titretextcarousel{
+  padding: 6px;
+  }
+
+  .zonetextcarousel{
+    margin-bottom: 10%;
+  }
+
+  .button-slider{
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 750px){
+  .carousel{
+    display: none;
+  }
+}

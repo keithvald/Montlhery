@@ -1,0 +1,949 @@
+@font-face {
+  font-family: 'Raleway-Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/raleway/Raleway-Regular.ttf),
+    local('Raleway-Medium, Geneva, Tahoma, sans-serif'),
+    local('Raleway-Medium, Geneva, Tahoma, sans-serif');
+    
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Slab'; 
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/roboto-slab/RobotoSlab-Regular.ttf),
+      local('Roboto-Slab, Geneva, Tahoma, sans-serif'),
+      local('Roboto-Slab, Geneva, Tahoma, sans-serif');
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway-Medium';
+  color: #2d2f31;
+}
+
+button {
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-family: 'Roboto-Slab';
+  text-align: center !important;
+  font-size: 4em !important;
+  font-weight: bold;
+  color: #1668ba;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-family: 'Raleway-Medium';
+  font-size: 2em !important;
+  font-weight: bold;
+  color: #1668ba;
+}
+
+h3 {
+  font-family: 'Roboto-Slab';
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #102b53;
+  font-size: 1.4em;
+}
+
+.row {
+  margin: 0;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.p-8 {
+  padding: 40px 80px;
+}
+
+p.low{
+  font-size: 0.8em !important;
+  letter-spacing: 2px;
+  max-width: 450px;
+}
+
+/*------Section - Préparer son permis------*/
+.container-permis {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.permis {
+  margin-bottom: 80px;
+}
+
+div.card {
+  background-color: #f0f2ff;
+  border: none;
+  text-align: center;
+  margin-bottom: 20%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.card-img-top {
+  width: 65%;
+  height: auto;
+  align-self: center;
+  margin-top: -35%;
+}
+
+.card-title {
+  text-align: center;
+  color: #1c2381;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+button.interest {
+  border: none;
+  background-color: #d8e6fc;
+  color: #1c458a;
+  font-size: 1.4em;
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 30px;
+}
+
+button.interest a {
+  color: #1c458a;
+}
+
+button.interest a:hover {
+  color: #113571;
+  text-decoration: none;
+}
+
+button.interest:hover {
+  background-color: #c0d1ee;
+}
+
+.second-line{
+  display: inline-block;
+}
+
+/*------Section : Mieux préparer son code------*/
+
+div.container-fluid.section-code {
+  background-color: #f0f2ff;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.section-code-logo-prepacode {
+  align-self: center;
+}
+
+.section-code-logo-prepacode img {
+  transition: 1s;
+}
+.section-code-logo-prepacode img:hover {
+  box-shadow: 0 0 25px 10px #c0c0c0;
+  background: #1668ba;
+  transform: rotateZ(10deg);
+}
+
+.description-code {
+  color: #55575B;
+  letter-spacing: 1px;
+}
+
+button.code-interest {
+  border: none;
+  background-color: #1668ba;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+
+h1.left {
+  text-align: left !important;
+  margin-bottom: 20px;
+}
+
+button.code-interest:hover {
+  background-color: #0f559b;
+}
+
+button.code-interest a {
+  color: white;
+}
+
+button.code-interest a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/*------Section - Notre histoire------*/
+
+.container-fluid-history {
+  margin-bottom: 80px;
+}
+
+.section-history {
+  justify-content: center;
+}
+
+.title-our-history {
+  margin-bottom: 55px;
+}
+
+.section-history-description {
+  text-align: justify;
+  border-left: 1px solid #bebebe;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.4em;
+  align-self: center;
+  letter-spacing: 0.25px;
+}
+
+.section-history-description p {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.section-photo-history {
+  text-align: center;
+  align-self: center;
+}
+
+.photo-history {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+}
+
+div.section-history-description strong {
+  color: #1668ba;
+}
+
+/*------Section - Notre équipe------*/
+/*------Les formateurs------*/
+
+.section-team:last-child {
+  justify-content: center;
+  background-color: #f0f2ff;
+  margin-bottom: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.photo-history {
+  width: 80%;
+}
+
+.section-team-formateurs {
+  padding-left: 30px;
+}
+
+.section-team h1 {
+  text-align: left !important;
+}
+
+.section-flickity {
+  align-self: center;
+}
+
+.team-description {
+  font-family: 'Roboto-Slab';
+  font-size: 2.2em;
+  color: #1668ba;
+  margin-top: -40px;
+}
+
+.six {
+  font-size: 2.4em;
+}
+
+.section-team ul li {
+  list-style: none;
+  color: #55575B !important;
+  font-size: 1.2em;
+  line-height: 40px;
+}
+
+.section-team ul li::before {
+  content: '';
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+  margin-bottom: -5px;
+  background-image: url(../img/icones/check.png);
+  background-size: cover;
+}
+
+.section-team ul li:nth-child(2) {
+  padding-left: 15px;
+}
+
+.section-team ul li:last-child {
+  padding-left: 30px;
+}
+
+/*------Flickity carousel------*/
+
+.flickity .carousel {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.flickity .carousel-cell {
+  width: 250px;
+  height: 250px;
+  margin-right: 10%;
+  border-radius: 50%;
+  counter-increment: carousel-cell;
+  padding-bottom: 20px;
+}
+
+.flickity .carousel-cell.is-selected {
+  border: turquoise;
+}
+
+.flickity .carousel-cell img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.flickity .custom-color {
+  color: #1668ba;
+  font-weight: 700;
+}
+
+.flickity ol.flickity-page-dots {
+  display: none;
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+  width: 130%;
+  height: 130%;
+}
+
+.flickity-prev-next-button.next {
+  margin-right: -30px !important;
+}
+
+.flickity-prev-next-button.previous {
+  margin-left: -60px !important;
+}
+
+.flickity-button {
+  position: absolute;
+  background: none;
+  color: #b4b5b6;
+}
+
+.flickity-button:hover {
+  background: none;
+  color: #1668ba;
+}
+
+/*------Marks and Statistics------*/
+
+.section-stats {
+  margin-left: 80px !important;
+  margin-right: 80px !important;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.section-stats-pictures {
+  text-align: center;
+}
+
+.section-stats h1 {
+  text-align: left !important;
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+}
+
+.icon-info {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.icon-info:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+button.button-info-stat {
+  background-color: #1668ba;
+  border: none;
+  color: white;
+  padding: 0;
+  padding-right: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+button .button-info-stat-i {
+  background-color: #0f4c8a;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+button.button-info-stat:hover {
+  background-color: #0f4c8a;
+}
+
+.section-stats h2 {
+  margin-top: -20px;
+  margin-bottom: 30px;
+  font-size: 1.2em !important;
+}
+
+.pictures {
+  width: 70%;
+  height: auto;
+}
+
+.section-stats p {
+  color: #55575B;
+  font-size: 1.1em;
+}
+
+.pourcentage {
+  font-size: 2em;
+  color: #1668ba;
+  font-weight: bold;
+}
+
+p.marknote {
+  color: #093c70;
+  font-size: 2em;
+}
+
+span.mark-number {
+  font-size: 2.4em;
+  color: #2b67f5;
+}
+
+span.collected-marks-number {
+  font-size: 25px;
+  color: #2b67f5;
+}
+
+span.collected-marks {
+  font-size: 15px;
+}
+
+/*------ Section - Map ------*/
+.section-map h1 {
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.map {
+  width: 100%;
+  height: 450px;
+}
+
+/*------------Responsive------------*/
+
+@media (min-width: 1800px) {
+  .section-history h1 {
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
+
+  .section-history-description {
+    font-size: 1.5em;
+  }
+
+  .section-team {
+    padding-top: 60px;
+  }
+
+  p.team-description {
+    font-size: 3em;
+  }
+
+  .section-team-formateurs ul {
+    font-size: 1.4em;
+    line-height: 50px;
+    letter-spacing: 1px;
+  }
+
+  .flickity .carousel-cell {
+    width: 300px;
+    height: 300px;
+    margin-right: 10%;
+  }
+
+  .flickity-prev-next-button .flickity-button-icon {
+    width: 180%;
+    height: 180%;
+  }
+
+  .flickity-prev-next-button.next {
+    margin-right: -60px !important;
+  }
+
+  .flickity-prev-next-button.previous {
+    margin-left: -90px !important;
+  }
+
+  .map {
+    width: 100%;
+    height: 600px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1550px) {
+  .flickity .carousel-cell {
+    width: 180px;
+    height: 180px;
+    margin-right: 10%;
+  }
+}
+
+@media (min-width: 901px) {
+  .section-code-logo-prepacode img {
+    width: 250px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1500px) {
+  .section-code-logo-prepacode img {
+    width: 400px;
+    height: auto;
+  }
+
+  .section-permis h1 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1600px) {
+  h1 {
+    font-size: 3em !important;
+  }
+
+  .card-title {
+    font-size: 1.5em;
+  }
+
+  button.interest {
+    border: none;
+    background-color: #d8e6fc;
+    color: #1c458a;
+    font-size: 1em;
+  }
+  .section-history-description {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 1500px) {
+  .section-history-description {
+    font-size: 1.2em;
+  }
+
+  .icon-info {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1400px) {
+  button.interest {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .section-history-description {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1300px) {
+  h1 {
+    font-size: 2.3em !important;
+  }
+
+  .container-permis {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  div.card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .section-history-description {
+    font-size: 1em;
+  }
+
+  .icon-info {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+  }
+
+  .collected-marks-number {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-history-description {
+    font-size: 0.9em;
+  }
+
+  .p-8 {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 2em !important;
+  }
+
+  .flickity .carousel-cell {
+    width: 200px;
+    height: 200px;
+  }
+  .section-team ul li {
+    font-size: 1em;
+  }
+
+  .section-history-description {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 1000px) {
+  p.description-code {
+    font-size: 0.8em;
+  }
+
+  .permis {
+    margin-bottom: 15px;
+  }
+
+  .section-permis h1 {
+    margin-bottom: 60px;
+  }
+
+  .map {
+    height: 280px;
+  }
+}
+
+@media (max-width: 991px) {
+  .photo-history {
+    width: 70%;
+  }
+
+  .section-history-description {
+    border: none;
+  }
+}
+
+@media (max-width: 935px) {
+  .card-title{
+    font-size: 1.2em;
+  }
+
+  button.interest {
+    font-size: 0.8em;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  button.interest {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  p.card-title{
+    margin-top: -30px;
+    margin-bottom: 20px;
+  }
+
+  button.interest{
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-code-logo-prepacode img {
+    width: 200px;
+    height: auto;
+  }
+
+  .flickity .carousel-cell {
+    width: 150px;
+    height: 150px;
+    margin-right: 10%;
+  }
+  .flickity-prev-next-button .flickity-button-icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  div.section-team h1 {
+    font-size: 2em !important;
+  }
+
+  .six {
+    font-size: 1.5em;
+  }
+
+  .team-description {
+    font-size: 2em;
+  }
+
+  .section-history h1 {
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+  }
+
+  .photo-history {
+    width: 80%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 844px) {
+  .card-title {
+    font-size: 1em;
+  }
+
+  button.interest {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-inner-code {
+    text-align: center;
+  }
+  .section-inner-code h1.left {
+    text-align: center !important;
+  }
+  p.description-code {
+    font-size: 1.2em;
+  }
+
+  div.container-permis.section-permis div.card:first-child {
+    margin-top: 40px;
+  }
+
+  div.container-permis.section-permis div.card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .section-history-description {
+    font-size: 1.2em;
+  }
+
+  .section-photo-history {
+    margin-top: 30px;
+  }
+
+  .flickity-prev-next-button.next {
+    margin-right: 0 !important;
+  }
+
+  .flickity-prev-next-button.previous {
+    margin-left: 0 !important;
+  }
+
+  .section-team-formateurs {
+    margin-bottom: 30px;
+  }
+
+  p.marknote {
+    text-align: center;
+  }
+
+  span.collected-marks-number {
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .section-stats p.button-stats {
+    text-align: center;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+  .section-team-formateurs {
+    padding-left: none;
+    text-align: center;
+  }
+
+  .section-team-formateurs h1 {
+    display: inline-block;
+    margin-right: 70px;
+  }
+
+  .section-team-formateurs ul li {
+    display: inline-block;
+  }
+
+  .section-team-formateurs ul {
+    display: inline-block;
+  }
+
+  .section-team-formateurs p.team-description {
+    display: inline-block;
+    text-align: right !important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  button.interest {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  p.card-title{
+    margin-top: -50px;
+    margin-bottom: 20px;
+  }
+
+  button.interest {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .flickity .carousel-cell {
+    margin-right: 13%;
+  }
+
+  .flickity-prev-next-button .flickity-button-icon {
+    width: 70%;
+    height: 70%;
+  }
+
+  .section-stats {
+    margin: 10px !important;
+  }
+
+  .map {
+    height: 180px;
+  }
+}
+
+@media (min-width: 621px) {
+  button.button-info-stat {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .section-permis h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.4em !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .p-8 {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 530px){
+  .card-title{
+    font-size: 0.8em;
+  }
+
+  div.container-permis .card-body {
+    padding: 1.25rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  button.interest {
+    padding: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    width: 100%;
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 430px) {
+  div.container-permis.section-permis div.card:first-child {
+    margin-top: 40px;
+  }
+
+  .second-line{
+    display: block;
+  }
+}
+
+@media (max-width: 411px) {
+  .flickity .carousel-cell {
+    width: 200px;
+    height: 200px;
+    margin-right: 25%;
+  }
+}
+
+@media (max-width: 350px) {
+  .section-stats h1 {
+    font-size: 1.6em !important;
+  }
+
+  .icon-info {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 295px){
+    button.interest {
+    font-size: 0.5em;
+  }
+}
