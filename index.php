@@ -78,7 +78,7 @@
         </div>
       </div>
     </div>
-    <div class="col-6 col-md-4">
+    <div class="col-6 col-md-6">
       <div class="card">
         <img src="assets/img/cards/motorcycle.webp" alt="icon" class="card-img-top">
         <div class="card-body">
@@ -87,16 +87,7 @@
         </div>
       </div>
     </div>
-    <div class="col-6 col-md-4">
-      <div class="card">
-        <img src="assets/img/cards/caravane.webp" alt="icon" class="card-img-top">
-        <div class="card-body">
-          <p class="card-title">Permis <span class="second-line">remorque</span></p>
-          <a href="code/permis-remorque.php" aria-label="Permis remorque info"><button class="interest">Ca m'intéresse !</button></a>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-md-4">
+    <div class="col-6 col-md-6">
       <div class="card">
         <img src="assets/img/cards/scooter.webp" alt="icon" class="card-img-top">
         <div class="card-body">
