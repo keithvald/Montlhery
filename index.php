@@ -98,6 +98,25 @@
     </div>
   </div>
 </div>
+
+<!--Actualités-->
+<div class="container">
+	<div class="card p-4 p-md-5 mb-4">
+		<div class="col-md-6 px-0">
+			<h1 class="display-4 fst-italic">Actualités</h1>
+			<p class="lead"></p>
+		</div>
+	</div>
+	<ul class="list-group list-group-flush mb-5">
+		<li class="list-group-item">An item</li>
+		<li class="list-group-item">A second item</li>
+		<li class="list-group-item">A third item</li>
+		<li class="list-group-item">A fourth item</li>
+		<li class="list-group-item">And a fifth one</li>
+	</ul>
+</div>
+
+
 <!--Code-->
 <div class="container-fluid section-code">
   <div class="row p-8">
@@ -111,6 +130,8 @@
     </div>
   </div>
 </div>
+
+
 <!--historique-->
 <div class="container-fluid container-fluid-history">
   <div class="row section-history">
@@ -121,71 +142,83 @@
       <p>L’<strong>auto école Montlhéry</strong> a été crée en 1974 par Bernard Caussignac.<br/><br/>
 Elle se situe aux abords du centre ville de <strong>Narbonne</strong> entre le jardin de la révolution et la place Bistan (ou place du forum). A proximité de la gare routière et de la gare SNCF, elle est pratique d’accès.<br/><br/>
 Du haut de ces 44 ans d’histoire elle a fondé sa renommée sur son <strong>sérieux</strong>, sa <strong>convivialité</strong>, son <strong>professionnalisme</strong> ainsi que ses <strong>résultats.</strong>
-Nicolas et Gary Caussignac dirigent l’auto-école accompagnés de cinq autres moniteurs Patrick, Cédric, Florianne, Dimitri et Nicolas qui enseignent la conduite automobile.<br/></p>
+Nicolas et Gary Caussignac dirigent l’auto-école accompagnés de six autres moniteurs Patrick, Cédric, Dimitri, Gregory, Nicolas et Sébastien. Ces deux derniers s'occupent aussi des permis moto et cyclomoteur.<br/></p>
     </div>
     <div class="col-12 col-md-6 col-lg-5 section-photo-history">
-      <img src="assets/img/photo/histoire.webp" alt="photo" class="photo-history"/>
+      <img src="assets/img/photo/histoire.jpg" alt="photo" class="photo-history"/>
     </div>
   </div>
 </div>
 
 <!-- Flickity HTML init -->
 <div class="container-fluid section-team">
-  <div class="row section-team">
-    <div class="col-12 col-md-4 col-xl-4 section-team-formateurs">
-      <h1>Notre équipe</h1>
-      <p class="team-description"><span class="six">6</span> formateurs</p>
-        <ul>
-          <li>Compétents</li>
-          <li>A l'écoute</li>
-          <li>Qui aiment leur métier</li>
-        </ul>
-    </div>
-    <div class="col-12 col-md-7 col-xl-5 section-flickity">
-      <div class="flickity">
-        <div class="carousel custom-div" data-flickity='{ "groupCells": true }'>
-          <div class="carousel-cell">
-            <div class="col">
-              <img src="assets/img/slider/floriane.webp" alt="floriane" />
-              <p class="text-center custom-color">Floriane</p>
-            </div>
-          </div>
-          <div class="carousel-cell">
-            <div class="col">
-              <img src="assets/img/slider/gary.webp" alt="gary" />
-              <p class="text-center custom-color">Gary</p>
-            </div>
-          </div>
-          <div class="carousel-cell">
-            <div class="d-flex">
-              <div class="col">
-                <img src="assets/img/slider/cedric.webp" alt="cedric" />
-                <p class="text-center custom-color">Cédric</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-cell">
-            <div class="col">
-              <img src="assets/img/slider/dimitri.webp" alt="dimitri" />
-              <p class="text-center custom-color">Dimitri</p>
-            </div>
-          </div>
-          <div class="carousel-cell">
-            <div class="col">
-              <img src="assets/img/slider/nicolas.webp" alt="nicolas" />
-              <p class="text-center custom-color">Nicolas</p>
-            </div>
-          </div>
-          <div class="carousel-cell">
-            <div class="col">
-              <img src="assets/img/slider/patrick.webp" alt="patrick" />
-              <p class="text-center custom-color">Patrick</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="row section-team">
+		<div class="col-12 col-md-4 col-xl-4 section-team-formateurs">
+			<h1>Notre équipe</h1>
+			<p class="team-description"><span class="six">6</span> formateurs</p>
+			<ul>
+				<li>Compétents</li>
+				<li>A l'écoute</li>
+				<li>Qui aiment leur métier</li>
+			</ul>
+		</div>
+		<div class="col-12 col-md-7 col-xl-5 section-flickity">
+			<div class="flickity">
+				<div class="carousel custom-div" data-flickity='{ "groupCells": true }'>
+					<div class="carousel-cell">
+						<div class="col">
+							<img src="assets/img/slider/gary.webp" alt="gary" />
+							<p class="text-center custom-color">Gary</p>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="d-flex">
+							<div class="col">
+								<img src="assets/img/slider/cedric.webp" alt="cedric" />
+								<p class="text-center custom-color">Cédric</p>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="col">
+							<img src="assets/img/slider/dimitri.webp" alt="dimitri" />
+							<p class="text-center custom-color">Dimitri</p>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="col">
+							<img src="assets/img/slider/nicolas.webp" alt="nicolas" />
+							<p class="text-center custom-color">Nicolas</p>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="col">
+							<img src="assets/img/slider/patrick.webp" alt="patrick" />
+							<p class="text-center custom-color">Patrick</p>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="col">
+							<img src="assets/img/slider/sebastien.jpg" alt="sebastien" />
+							<p class="text-center custom-color">Sébastien</p>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="col">
+							<img src="assets/img/slider/nicolas_.jpg" alt="nicolas" />
+							<p class="text-center custom-color">Nicolas</p>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="col">
+							<img src="assets/img/slider/gregory.jpg" alt="gregory" />
+							<p class="text-center custom-color">Gregory</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!--Stats-->
