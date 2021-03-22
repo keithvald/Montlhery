@@ -10,7 +10,7 @@
   <div class="landing-page-description">
     <div class="jumbotron row p-8">
       <div class="col-12 col-md-8">
-        <h1 class="">Permis 125</h1>
+        <h1 class="">Formation 125cm3</h1>
         <p class="lead">
           À compter du 1er janvier 2011, la conduite d’un scooter 125cm3 ou d’un
           scooter à 3 roues avec un permis B nécessite l’obtention d’une
