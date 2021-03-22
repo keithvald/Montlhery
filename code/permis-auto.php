@@ -19,8 +19,7 @@
 
 				<div class="row">
 					<p>
-						L’auto-école Montlhéry met à votre disposition 7 enseignants de la conduite automobile diplômés et
-						expérimentés et 7 véhicules climatisés (des nouvelles Clio) dont 2 avec boite à vitesse automatique.
+						L’auto-école Montlhéry met à votre disposition 8 enseignants de la conduite automobile diplômés et expérimentés et 8 véhicules climatisés (des nouvelles Clio) dont 3 avec boite à vitesse automatique.
 					</p>
 				</div>
 
