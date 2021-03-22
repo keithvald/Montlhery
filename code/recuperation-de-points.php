@@ -21,9 +21,9 @@
 </div>
 <div class="row p-8">
   <p>
-    Le tarif des stages varie entre
-    <strong class="c-blue">180 Euros et 245 Euros</strong> en fonction du lieu
-    où il sera effectué.
+	  Le tarif des stages varie entre 
+	  <strong class="c-blue">180 Euros et 400 Euros</strong> en fonction du lieu 
+	  où il sera effectué.
   </p>
   <p>Pour constituer votre dossier il vous sera demandé :</p>
   <ul class="ul-style">
