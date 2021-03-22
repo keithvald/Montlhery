@@ -17,9 +17,7 @@
         <hr class="my-4" />
         <div class="row">
           <div>
-            <p>
-              Pour vous accompagner dans votre formation et vous faire progresser sur les différents points techniques importants, l’auto-école Montlhéry vous propose une formation assurée par deux moniteurs d’expérience (plus de 700 motards ayant suivi leur formation).
-            </p>
+            Pour vous accompagner dans votre formation et vous faire progresser sur les différents points techniques importants, l’auto-école Montlhéry vous propose une formation assurée par <strong class="c-blue">quatre moniteurs</strong> d’expérience (<strong class="c-blue">plus de 1000 motards</strong> ayant suivi leur formation).
           </div>
           <div id="mon-collapse" class="collapse">
             <p>
