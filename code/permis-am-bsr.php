@@ -14,8 +14,7 @@
         <p class="lead">
           Le scooter, le 50 à vitesses, la <strong class="c-blue">mobylette</strong> sont les premiers moyens de
           locomotion qui sont mis à la disposition du <strong class="c-blue">jeune conducteur</strong>. Pour
-          permettre l’accès à tout le monde, nous proposons aux élèves deux
-          cyclos.
+          permettre l’accès à tout le monde, nous proposons aux élèves <strong class="c-blue">trois cyclos</strong>.
         </p>
         <hr class="my-4" />
         <div class="row">
