@@ -74,7 +74,7 @@
           <div class="card-body">
             <ul>
               <li>
-                Passe ton permis scooter<br />
+                Passe ta formation sur scooter ou moto 125cm3<br />
                 avec notre auto-école
               </li>
             </ul>
