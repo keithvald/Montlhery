@@ -113,6 +113,9 @@
               <a class="nav-link" href="../code/conduite-accompagnee.php" aria-label="Conduite accompagnée">Conduite accompagnée</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="/code/mode-de-financement-du-permis.php" aria-label="Modes de financement">Modes de financement</a>
+		  </li>
+            <li class="nav-item">
               <a class="nav-link" href="../code/recuperation-de-points.php" aria-label="Récuperation de points">Récupération de points</a>
             </li>
             <li class="nav-item">
