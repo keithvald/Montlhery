@@ -154,7 +154,7 @@
 </div>
 <!--------Section - different roads--------->
 <div class="col-12">
-  <h2 class="text-center competences-permis-moto">Formation sur pistes</h2>
+  <h2 class="text-center competences-permis-moto">Formation</h2>
 </div>
 <div class="row p-8 formation-pistes-moto">
   <div class="col-12 col-lg-6">
@@ -169,7 +169,7 @@
     </ul>
   </div>
   <div class="col-12 col-lg-6">
-    <h3 class="text-center mb-5">Formation <br /> sur hors piste</h3>
+    <h3 class="text-center mb-5">Formation <br /> en circulation</h3>
     <ul>
       <li>Etude des <strong class="c-blue">trajectoires en courbe</strong> – virage – épingle à cheveu (une étude théorique en salle précède la mise en pratique
         sur route)</li>
