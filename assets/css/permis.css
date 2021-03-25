@@ -14,7 +14,7 @@
   padding: 40px 80px;
 }
 
-p.low{
+p.low {
   font-size: 0.8em;
   max-width: 450px;
 }
@@ -94,7 +94,7 @@ hr.hr-custom-p {
 
 .landing-page-description .jumbotron .card ul li {
   list-style: none;
-  color: #55575B;
+  color: #55575b;
   font-size: 1.1em;
   margin-bottom: 7px;
 }
@@ -204,7 +204,7 @@ div.container-fluid.section-vacation {
   }
 }
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
   div.container-fluid.section-vacation {
     background-image: none;
   }
@@ -340,7 +340,7 @@ ul.ul-am-bsr li::before {
 .contact-form .text-box {
   background: #fff;
   color: #2d2f31;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
   width: calc(50% - 5px);
   height: 50px;
   padding: 12px;
@@ -354,7 +354,7 @@ ul.ul-am-bsr li::before {
 .contact-form textarea {
   background: #fff;
   color: #2d2f31;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
   width: 100%;
   padding: 12px;
   font-size: 15px;
@@ -388,46 +388,46 @@ ul.ul-am-bsr li::before {
   background: #0582e3;
 }
 
-h1.title-contact{
+h1.title-contact {
   text-align: center !important;
 }
 
-h2.contact{
+h2.contact {
   font-family: 'Roboto-Slab' !important;
 }
 
-.map-contact{
+.map-contact {
   max-height: 250px;
 }
 
-@media (min-width: 1800px){
-  .map-contact-sidebar{
+@media (min-width: 1800px) {
+  .map-contact-sidebar {
     display: block;
   }
 
-  .map-contact-footer{
+  .map-contact-footer {
     display: none;
   }
 }
 
-@media (max-width: 1799px){
-  .map-contact-sidebar{
+@media (max-width: 1799px) {
+  .map-contact-sidebar {
     display: none;
   }
 
-  .map-contact-footer{
+  .map-contact-footer {
     display: block;
   }
 }
 
-@media (max-width: 1400px){
-  .contact-info p{
+@media (max-width: 1400px) {
+  .contact-info p {
     font-size: 0.9em;
   }
 }
 
-@media (max-width: 1200px){
-  .contact-info p{
+@media (max-width: 1200px) {
+  .contact-info p {
     font-size: 0.8em;
   }
 }
@@ -459,18 +459,18 @@ h2.contact{
 }
 /*--Adresse et map--*/
 
-img.illu{
+img.illu {
   max-width: 300px;
 }
 
-@media (max-width: 400px){
-  img.illu{
+@media (max-width: 400px) {
+  img.illu {
     width: 220px;
   }
 }
 
-@media (max-width: 300px){
-  img.illu{
+@media (max-width: 300px) {
+  img.illu {
     width: 180px;
   }
 }
@@ -855,10 +855,10 @@ svg.svg-info-points-2 {
 
 @media (max-width: 767px) {
   .card-img-top {
-      width: 40%;
-      height: auto;
-      align-self: center;
-      margin-top: -25%;
+    width: 40%;
+    height: auto;
+    align-self: center;
+    margin-top: -25%;
   }
 
   .middle-section-categories-permis-moto {
@@ -897,13 +897,13 @@ svg.svg-info-points-2 {
   }
 }
 
-@media (max-width: 350px){
-  .prepacode-logo{
+@media (max-width: 350px) {
+  .prepacode-logo {
     width: 200px;
   }
 }
 
-@media (max-width: 300px){
+@media (max-width: 300px) {
   .picture-permis-scooter {
     width: 200px;
   }
@@ -968,7 +968,7 @@ p.description-conduite-accompagnee {
 
 /*Formation initiale*/
 div.container-fluid-bleu {
-  color: #55575B;
+  color: #55575b;
   text-align: justify;
   align-self: center;
   justify-content: center;
@@ -1025,7 +1025,7 @@ div.container-fluid-blanc {
 .examen,
 .probatoire {
   text-align: justify;
-  color: #55575B;
+  color: #55575b;
 }
 
 /*Bonus*/
@@ -1088,22 +1088,22 @@ h2.mentions-legales {
 
 /*breakwords*/
 
-.question-conduite-accompagnee{
+.question-conduite-accompagnee {
   display: inline-block;
 }
 
-@media (max-width: 385px){
-  .question-conduite-accompagnee{
+@media (max-width: 385px) {
+  .question-conduite-accompagnee {
     display: block;
   }
 }
 
-.question-contact{
+.question-contact {
   display: inline-block;
 }
 
-@media (max-width: 500px){
-  .question-contact{
+@media (max-width: 500px) {
+  .question-contact {
     display: block;
   }
 }

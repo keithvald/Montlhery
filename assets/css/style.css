@@ -5,17 +5,17 @@
   src: url(../fonts/raleway/Raleway-Regular.ttf),
     local('Raleway-Medium, Geneva, Tahoma, sans-serif'),
     local('Raleway-Medium, Geneva, Tahoma, sans-serif');
-    
+
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Roboto-Slab'; 
+  font-family: 'Roboto-Slab';
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/roboto-slab/RobotoSlab-Regular.ttf),
-      local('Roboto-Slab, Geneva, Tahoma, sans-serif'),
-      local('Roboto-Slab, Geneva, Tahoma, sans-serif');
+    local('Roboto-Slab, Geneva, Tahoma, sans-serif'),
+    local('Roboto-Slab, Geneva, Tahoma, sans-serif');
   font-display: swap;
 }
 
@@ -71,7 +71,7 @@ h3 {
   padding: 40px 80px;
 }
 
-p.low{
+p.low {
   font-size: 0.8em !important;
   letter-spacing: 2px;
   max-width: 450px;
@@ -136,8 +136,49 @@ button.interest:hover {
   background-color: #c0d1ee;
 }
 
-.second-line{
+.second-line {
   display: inline-block;
+}
+
+/* section Actu */
+.actu-title {
+  background-color: #f0f2ff;
+}
+
+.actu .card {
+  text-align: start;
+  margin: 2%;
+}
+
+.actu .card:hover {
+  box-shadow: 10px 5px 15px red;
+}
+
+.actu .card .card-title {
+  color: #2b67f5;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: start;
+}
+
+.actu-img-container {
+  padding: 1%;
+  margin: 0;
+  /* border: #1668ba 4px solid; */
+  display: flex;
+  overflow: hidden;
+}
+
+.actu-img-container img {
+  height: 100%;
+  width: 100%;
+  position: center center;
+  object-fit: contain;
+}
+
+.actu .card-footer {
+  padding: 0;
+  align-items: center;
 }
 
 /*------Section : Mieux préparer son code------*/
@@ -165,7 +206,7 @@ div.container-fluid.section-code {
 }
 
 .description-code {
-  color: #55575B;
+  color: #55575b;
   letter-spacing: 1px;
 }
 
@@ -283,7 +324,7 @@ div.section-history-description strong {
 
 .section-team ul li {
   list-style: none;
-  color: #55575B !important;
+  color: #55575b !important;
   font-size: 1.2em;
   line-height: 40px;
 }
@@ -432,7 +473,7 @@ button.button-info-stat:hover {
 }
 
 .section-stats p {
-  color: #55575B;
+  color: #55575b;
   font-size: 1.1em;
 }
 
@@ -679,7 +720,7 @@ span.collected-marks {
 }
 
 @media (max-width: 935px) {
-  .card-title{
+  .card-title {
     font-size: 1.2em;
   }
 
@@ -694,12 +735,12 @@ span.collected-marks {
     padding-left: 30px;
   }
 
-  p.card-title{
+  p.card-title {
     margin-top: -30px;
     margin-bottom: 20px;
   }
 
-  button.interest{
+  button.interest {
     margin-bottom: 0;
   }
 }
@@ -837,7 +878,7 @@ span.collected-marks {
     padding-left: 20px;
   }
 
-  p.card-title{
+  p.card-title {
     margin-top: -50px;
     margin-bottom: 20px;
   }
@@ -891,8 +932,8 @@ span.collected-marks {
   }
 }
 
-@media (max-width: 530px){
-  .card-title{
+@media (max-width: 530px) {
+  .card-title {
     font-size: 0.8em;
   }
 
@@ -917,7 +958,7 @@ span.collected-marks {
     margin-top: 40px;
   }
 
-  .second-line{
+  .second-line {
     display: block;
   }
 }
@@ -942,8 +983,8 @@ span.collected-marks {
   }
 }
 
-@media (max-width: 295px){
-    button.interest {
+@media (max-width: 295px) {
+  button.interest {
     font-size: 0.5em;
   }
 }

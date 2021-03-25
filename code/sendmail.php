@@ -1,4 +1,3 @@
-
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 
@@ -123,8 +122,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     </div>';
           };
       
-          // echo($name ." , ". $email ." , ". $postal ." , ". $city ." , ". $objets ." , ". $message);
-      
         }else{
           $error6 = '<div class="alert-error mb-5">
                       <span>Erreur ! Un champ est vide.</span>
@@ -179,4 +176,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 }
 ?>
-
