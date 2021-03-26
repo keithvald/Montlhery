@@ -106,8 +106,6 @@
 											auto</a></li>
 									<li><a class="dropdown-item" href="code/permis-moto.php" aria-label="Permis moto">Permis
 											moto</a></li>
-									<li><a class="dropdown-item" href="code/permis-remorque.php"
-											aria-label="Permis remorque">Permis remorque</a></li>
 									<li><a class="dropdown-item" href="code/permis-am-bsr.php" aria-label="Permis AM(BSR)">Permis
 											AM(BSR)</a></li>
 									<li><a class="dropdown-item" href="code/scooter.php" aria-label="125cm3">125cm3</a></li>
