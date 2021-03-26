@@ -52,23 +52,27 @@ require_once('select.php');
 							<th>ID</th>
 							<th>Auteur</th>
 							<th>Titre</th>
+							<th>Lien Article</th>
 							<th>Image</th>
-							<th>Text</th>
+							<th>Sommaire</th>
 							<th>Date Creation</th>
 							<th>Action</th>
 						</thead>
 						<tbody>
 							<?php
+							setlocale(LC_TIME, 'fr_FR.UTF-8');
 							foreach($result as $news){
+							$date = ucfirst(strftime("%A %e %B %Y %T", strtotime($news['dateCreation'])));
 							?>
 							<tr>
 								<td><?= $news['id'] ?></td>
 								<td><?= $news['auteur'] ?></td>
 								<td><?= $news['titre'] ?></td>
+								<td><?= $news['lien'] ?></td>
 								<td> <img src="../assets/img/crud/<?= $news['image']; ?>" height="50" width="50"
 										alt="logo securiter routierre"></td>
-								<td><?= $news['text'] ?></td>
-								<td><?= $news['dateCreation'] ?></td>
+								<td><?= $news['sommaire'] ?></td>
+								<td><?= $date ?></td>
 								<td>
 									<a href="detail.php?id=<?= $news['id'] ?>" class="btn btn-info" target=""
 										rel="noopener noreferrer">

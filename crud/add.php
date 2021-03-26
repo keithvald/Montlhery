@@ -34,22 +34,37 @@ if($_POST){
 		$_SESSION['erreur'] = "Le fichier est vide ou trop grand. Taille maximum 4 mb";
 	};
 
+	if (isset($_POST['lien']) && !empty($_POST['lien'])){
+		$lien = strip_tags($_POST['lien']);
+	}else{
+		$lien = "";
+	};
+
 	if (isset($_POST['text']) && !empty($_POST['text'])){
 		$text = strip_tags($_POST['text']);
 	}else{
 		$_SESSION['erreur'] = "Le champ text est vide ou pas definie";
 	};
 
+	if (isset($_POST['sommaire']) && !empty($_POST['sommaire'])){
+		$sommaire = strip_tags($_POST['sommaire']);
+	}else{
+		$_SESSION['erreur'] = "Le champ sommaire est vide ou pas definie";
+	};
+
+
 	if (isset($auteur) && isset($titre) && isset($imageVerification) && isset($text)){
 		require_once('connect.php');
-		$sql = "INSERT INTO `news` (`auteur`, `titre`, `image`, `text`)
-		VALUES (:newsAuteur, :newsTitre, :newsImage, :newsText);";
+		$sql = "INSERT INTO `news` (`auteur`, `titre`, `lien`, `image`,`sommaire`, `text`)
+		VALUES (:newsAuteur, :newsTitre, `:newsLien` :newsImage, :newsSommaire, :newsText);";
 
 		$query = $db->prepare($sql);
 		$query->bindValue(':newsAuteur', $auteur, PDO::PARAM_STR);
 		$query->bindValue(':newsTitre', $titre, PDO::PARAM_STR);
+		$query->bindValue(':newsLien', $lien, PDO::PARAM_STR_CHAR);
 		$query->bindValue(':newsImage', $filename, PDO::PARAM_STR);
 		$query->bindValue(':newsText', $text, PDO::PARAM_STR);
+		$query->bindValue(':newsSommaire', $text, PDO::PARAM_STR);
 		$query->execute();
 		
 		$_SESSION['message'] = "News ajouté";
@@ -116,10 +131,20 @@ if($_POST){
 								<input type="text" name="titre" class="form-control">
 							</div>
 
-							<div class="col-12">
+							<div class="col-md-6">
+								<label for="lien" class="form-label">Lien article</label>
+								<input type="text" name="lien" class="form-control" placeholder="Non obligatoir">
+							</div>
+
+							<div class="col-md-6">
 								<input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
 								<label for="file" class="form-label">Image</label>
 								<input type="file" name="file" class="form-control" />
+							</div>
+
+							<div class="col-12">
+								<label for="sommaire" class="form-label">Sommaire</label>
+								<textarea name="sommaire" class="form-control" cols="30" rows="1"></textarea>
 							</div>
 
 							<div class="col-12">

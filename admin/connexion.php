@@ -16,8 +16,6 @@ if($_POST){
 
 	if (isset($_POST['password']) && !empty($_POST['password'])){
 		$password = $_POST['password'];
-
-		password_hash($password, PASSWORD_DEFAULT, ['cost' => 14]);
 	}else{
 		$_SESSION['erreur'] = "Le champ password est vide ou pas definie";
 	};
@@ -52,28 +50,21 @@ if($_POST){
 require_once('../includes/header-page.php');
 ?>
 <h1><strong>Formulaire Connexion</strong></h1>
-<?php
-					if(!empty($_SESSION['erreur'])){
-					?>
+<?php if(!empty($_SESSION['erreur'])){
+?>
 <div class="alert alert-danger" role="alert">
-	<?= 
-						$_SESSION['erreur'];
-						?>
+	<?= $_SESSION['erreur'];?>
 </div>
-<?php
-					$_SESSION['erreur'] ="";
-					}
-					if(!empty($_SESSION['message'])){
-						?>
+<?php $_SESSION['erreur'] ="";
+}
+if(!empty($_SESSION['message'])){
+?>
 <div class="alert alert-success" role="alert">
-	<?= 
-							$_SESSION['message'];
-							?>
+	<?= $_SESSION['message'];?>
 </div>
-<?php
-						$_SESSION['message'] ="";
-						}
-					?>
+<?php $_SESSION['message'] ="";
+}
+?>
 <div class="row justify-content-center">
 	<form action="" method="POST" class="col-10">
 		<fieldset>
@@ -83,10 +74,10 @@ require_once('../includes/header-page.php');
 			<input type="text" class="form-control mb-3" placeholder="Nom" name="nom" required>
 
 			<label for="email" class="form-label"><b>Email</b></label>
-			<input type="text" class="form-control mb-3" placeholder="email" name="email" required>
+			<input type="mail" class="form-control mb-3" placeholder="email" name="email" required>
 
-			<label for="password" class="form-label"><b>Mots De Passe</b></label>
-			<input type="text" class="form-control mb-3" placeholder="PassWord Minimum 8 caractère" name="password" required>
+			<label for="password" class="form-label"><b>Mot De Passe</b></label>
+			<input type="password" class="form-control mb-3" placeholder="PassWord" name="password" required>
 
 			<div class="row justify-content-between">
 				<div class="col">

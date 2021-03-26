@@ -24,7 +24,10 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 }else{
 	$_SESSION['erreur'] = "Url invalid";
 	header('location:main.php');
-}
+};
+
+setlocale(LC_TIME, 'fr_FR.UTF-8');
+$date = ucfirst(strftime("%A %e %B %Y %T", strtotime($result['dateCreation'])));
 ?>
 <!DOCTYPE html>
 
@@ -47,11 +50,14 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 				<section class="col-12">
 					<h1>Detail du produit <?= $result['id']; ?> </h1>
 					<p>Id: <?= $result['id']; ?></p>
-					<p>Image: <img src="../assets/img/crud/<?= $result['image']; ?>" height="100" width="100"
-							alt="image produit <?= $result['image']; ?>"></p>
+					<p>Image:
+						<img src="../assets/img/crud/<?= $result['image']; ?>" height="100" width="100"
+							alt="<?= $result['image']; ?>">
+					</p>
+					<p>Sommaire: <?= $result['sommaire']; ?></p>
 					<p>Text: <?= $result['text']; ?></p>
 					<p>Auteur: <?= $result['auteur']; ?></p>
-					<p>Date de creation: <?= $result['dateCreation']; ?></p>
+					<p>Date de creation: <?= $date; ?></p>
 					<a href="main.php" class="btn btn-info" target="" rel="noopener noreferrer">Retour</a>
 					<a href="update.php?id=<?= $result['id']; ?>" class="btn btn-warning" target=""
 						rel="noopener noreferrer">Modification</a>
