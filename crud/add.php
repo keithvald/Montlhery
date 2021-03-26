@@ -1,6 +1,5 @@
 <?php
 require_once('session.php');
-
 if($_POST){
 	if (isset($_POST['auteur']) && !empty($_POST['auteur'])){
 		$auteur = strip_tags($_POST['auteur']);
@@ -35,15 +34,9 @@ if($_POST){
 	};
 
 	if (isset($_POST['lien']) && !empty($_POST['lien'])){
-		$lien = strip_tags($_POST['lien']);
+		$lien = $_POST['lien'];
 	}else{
 		$lien = "";
-	};
-
-	if (isset($_POST['text']) && !empty($_POST['text'])){
-		$text = strip_tags($_POST['text']);
-	}else{
-		$_SESSION['erreur'] = "Le champ text est vide ou pas definie";
 	};
 
 	if (isset($_POST['sommaire']) && !empty($_POST['sommaire'])){
@@ -52,6 +45,11 @@ if($_POST){
 		$_SESSION['erreur'] = "Le champ sommaire est vide ou pas definie";
 	};
 
+	if (isset($_POST['text']) && !empty($_POST['text'])){
+		$text = strip_tags($_POST['text']);
+	}else{
+		$_SESSION['erreur'] = "Le champ text est vide ou pas definie";
+	};
 
 	if (isset($auteur) && isset($titre) && isset($imageVerification) && isset($text)){
 		require_once('connect.php');

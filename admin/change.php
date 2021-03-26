@@ -11,7 +11,7 @@ if($_POST){
 	if (isset($_POST['secret']) && !empty($_POST['secret']) && strlen(($_POST['secret'])) == 10){
 		$secret = $_POST['secret'];
 	}else{
-		$_SESSION['erreur'] = "Le champ clef secrete est vide ou pas definie";
+		$_SESSION['erreur'] = "Le champ clef secrete est invalide";
 	};
 
 
@@ -24,26 +24,33 @@ if($_POST){
 		$query->execute();
 
 		$result = $query->fetch(PDO::FETCH_ASSOC);
+
+		$code = rand(9999999, 1111111);
+		$secretHashed = password_hash($secret, PASSWORD_DEFAULT, ['cost' => 14]);
+		$subject = 'Recuperation mot de passe';
+
+		if($email == $result['email']){
+			if(password_verify($secret, $result['secret'])){
+			$sql = "UPDATE `adminUser` SET `code`=:code, `secret`=:adminSecret WHERE `email` = :email;";
+			$query = $db->prepare($sql);
+			$query->bindValue(':code', $code, PDO::PARAM_INT);
+			$query->bindValue(':adminSecret', $secretHashed, PDO::PARAM_STR_CHAR);
+			$query->bindValue(':email', $email, PDO::PARAM_STR_CHAR);
+			$query->execute();
+			
+			require_once('../crud/close.php');
+	
+			require_once('mail.php');
+			
+			$_SESSION['email'] = $email;
+			header('location:code.php');
+			}else{
+				$_SESSION['erreur'] = "Cette clef est invalide";
+			};
+		}else{
+			$_SESSION['erreur'] = "Cette email na pas de compte administrateur";
+		};
 	};
-
-	$code = rand(9999999, 1111111);
-	$subject = 'Recuperation mot de passe';
-	if($email == $result['email']){
-		$sql = "UPDATE `adminUser` SET `code`=:code WHERE `email` = :email;";
-		$query = $db->prepare($sql);
-		$query->bindValue(':code', $code, PDO::PARAM_INT);
-		$query->bindValue(':email', $email, PDO::PARAM_STR_CHAR);
-		$query->execute();
-		
-		require_once('../crud/close.php');
-
-		require_once('mail.php');
-
-		$_SESSION['email'] = $email;
-		header('location:code.php');
-	}else{
-		$_SESSION['erreur'] = "Cette email na pas de compte administrateur";
-	}
 };
 
 require_once('../includes/header-page.php');
@@ -75,6 +82,8 @@ $_SESSION['message'] ="";
 			<label for="email" class="form-label"><b>Email</b></label>
 			<input type="text" class="form-control mb-3" placeholder="email" name="email" required>
 
+			<label for="secret" class="form-label"><b>Clef Secrete</b></label>
+			<input type="text" class="form-control mb-3" placeholder="clef secrete" name="secret" required>
 
 			<div class="row justify-content-between">
 				<div class="col">

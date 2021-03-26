@@ -54,6 +54,7 @@ $date = ucfirst(strftime("%A %e %B %Y %T", strtotime($result['dateCreation'])));
 						<img src="../assets/img/crud/<?= $result['image']; ?>" height="100" width="100"
 							alt="<?= $result['image']; ?>">
 					</p>
+					<p>Lien: <?= $result['lien']; ?></p>
 					<p>Sommaire: <?= $result['sommaire']; ?></p>
 					<p>Text: <?= $result['text']; ?></p>
 					<p>Auteur: <?= $result['auteur']; ?></p>

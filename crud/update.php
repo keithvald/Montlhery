@@ -14,27 +14,63 @@ if($_POST){
 		$_SESSION['erreur'] = "Le champ auteur est vide ou pas definie";
 	};
 
-	if (isset($_POST['image']) && !empty($_POST['image'])){
-		$image = strip_tags($_POST['image']);
+	if (isset($_POST['titre']) && !empty($_POST['titre'])){
+		$titre = strip_tags($_POST['titre']);
 	}else{
-		$_SESSION['erreur'] = "Le champ image est vide ou pas definie";
+		$_SESSION['erreur'] = "Le champ titre est vide ou pas definie";
+	};
+
+	if ($_FILES['file']['size'] != 0 && $_FILES['file']['size'] < 4194304 && !empty($_FILES['file']['tmp_name'])){
+		unlink("../assets/img/crud/".$result['image']);
+		$filename = $_FILES['file']['name'];
+		$location = "../assets/img/crud/".$filename;
+
+		if(is_uploaded_file($_FILES['file']['tmp_name'])){
+		$typeMime = mime_content_type($_FILES['file']['tmp_name']);
+			if( $typeMime == "image/png" || $typeMime == "image/jpeg"){
+				move_uploaded_file($_FILES['file']['tmp_name'], $location);
+				$imageVerification = "Image corectement telecharger";
+				$_SESSION['message'] = $imageVerification;
+			}else{
+				$_SESSION['erreur'] = "Le fichier n'est pas une image. Format .png et .jpg accepter seulement. Format actuel: " . $typeMime;
+			};
+		}else{
+			$_SESSION['erreur'] .= "Erreur l'image ne c'est pas ajouté";
+		};
+	}else{
+		$_SESSION['erreur'] = "Le fichier est vide ou trop grand. Taille maximum 4 mb";
+	};
+
+	if (isset($_POST['lien']) && !empty($_POST['lien'])){
+		$lien = strip_tags($_POST['lien']);
+	}else{
+		$lien = "";
+	};
+
+	if (isset($_POST['sommaire']) && !empty($_POST['sommaire'])){
+		$sommaire = strip_tags($_POST['sommaire']);
+	}else{
+		$_SESSION['erreur'] = "Le champ sommaire est vide ou pas definie";
 	};
 	
 	if (isset($_POST['text']) && !empty($_POST['text'])){
-		$text = strip_tags($_POST['text']);
+		$text = $_POST['text'];
 	}else{
 		$_SESSION['erreur'] = "Le champ text est vide ou pas definie";
 	};
 
-	if (isset($id) && isset($auteur) && isset($image) && isset($text)){
+	if (isset($id) && isset($auteur) && isset($titre) && isset($imageVerification) && isset($sommaire) && isset($text)){
 		require_once('connect.php');
-		$sql = "UPDATE `news` SET `auteur`=:newsAuteur, `image`=:newsImage, `text`=:newsText WHERE `id`=:id;";
+		$sql = "UPDATE `news` SET `auteur`=:newsAuteur,`titre`=:newsTitre, `lien`=:newsLien, `image`=:newsImage, `sommaire`= :newsSommaire, `text`=:newsText WHERE `id`=:id;";
 
 		$query = $db->prepare($sql);
 		$query->bindValue(':id', $id, PDO::PARAM_INT);
 		$query->bindValue(':newsAuteur', $auteur, PDO::PARAM_STR);
-		$query->bindValue(':newsImage', $image, PDO::PARAM_STR);
+		$query->bindValue(':newsTitre', $titre, PDO::PARAM_STR);
+		$query->bindValue(':newsLien', $lien, PDO::PARAM_STR_CHAR);
+		$query->bindValue(':newsImage', $filename, PDO::PARAM_STR);
 		$query->bindValue(':newsText', $text, PDO::PARAM_STR);
+		$query->bindValue(':newsSommaire', $text, PDO::PARAM_STR);
 		$query->execute();
 		
 		$_SESSION['message'] = "News modifié";
@@ -99,8 +135,8 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 					$_SESSION['erreur'] ="";
 					}
 					?>
-					<h1>Ajout news</h1>
-					<form action="" method="post">
+					<h1>Modifier news</h1>
+					<form action="" method="post" enctype="multipart/form-data">
 						<fieldset class="row g-3 fieldset">
 							<legend>
 								Modifier news
@@ -111,10 +147,26 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 								<input type="text" name="auteur" class="form-control" value="<?= $result['auteur'];?>">
 							</div>
 
+							<div class="col-md-6">
+								<label for="titre" class="form-label">Titre</label>
+								<input type="text" name="titre" class="form-control" value="<?= $result['titre'];?>">
+							</div>
 
 							<div class="col-md-6">
-								<label for="image" class="form-label">Image</label>
-								<input type="text" name="image" class="form-control" value="<?= $result['image'];?>">
+								<label for="lien" class="form-label">Lien article</label>
+								<input type="text" name="lien" class="form-control" value="<?= $result['lien'];?>">
+							</div>
+
+							<div class="col-md-6">
+								<input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+								<label for="file" class="form-label">Image</label>
+								<input type="file" name="file" class="form-control" />
+							</div>
+
+							<div class="col-12">
+								<label for="sommaire" class="form-label">Sommaire</label>
+								<textarea name="sommaire" class="form-control" cols="30"
+									rows="1"><?= $result['sommaire'];?></textarea>
 							</div>
 
 							<div class="col-12">

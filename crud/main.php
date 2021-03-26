@@ -47,6 +47,8 @@ require_once('select.php');
 						}
 					?>
 					<h1>Listes des news</h1>
+					<a href="gestion.php" class="btn btn-outline-secondary" target="" rel="noopener noreferrer">Gestion
+						Mail</a>
 					<table class="table">
 						<thead>
 							<th>ID</th>
@@ -70,7 +72,7 @@ require_once('select.php');
 								<td><?= $news['titre'] ?></td>
 								<td><?= $news['lien'] ?></td>
 								<td> <img src="../assets/img/crud/<?= $news['image']; ?>" height="50" width="50"
-										alt="logo securiter routierre"></td>
+										alt="<?= $news['image']; ?>"></td>
 								<td><?= $news['sommaire'] ?></td>
 								<td><?= $date ?></td>
 								<td>
