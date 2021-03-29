@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : jeu. 25 mars 2021 à 11:36
+-- Généré le : lun. 29 mars 2021 à 10:52
 -- Version du serveur :  8.0.23-0ubuntu0.20.04.1
 -- Version de PHP : 7.4.3
 
@@ -34,17 +34,17 @@ CREATE TABLE `adminUser` (
   `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `password` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `code` int NOT NULL,
-  `dateInscription` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `dateInscription` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `secret` varchar(150) COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Déchargement des données de la table `adminUser`
 --
 
-INSERT INTO `adminUser` (`id`, `nom`, `email`, `password`, `code`, `dateInscription`) VALUES
-(3, 'password', 'password', '$2y$10$.sJbu13IeF0KSdT6mqilxOnV1P3QKO48eAbuJBvgax7aPl3Me/i8i', 0, '2021-03-24 14:07:39'),
-(4, 'mikail', 'mikailkalkanpro@gmail.com', '$2y$10$C8lAIDbRpDZVPVsrntU93.qUPZOto1vRhLhua6hF.yvpTrmT8L.DG', 0, '2021-03-24 15:37:59'),
-(5, 'test', 'montlhery.autoecole.narbonne@gmail.com', 'test', 0, '2021-03-25 09:38:33');
+INSERT INTO `adminUser` (`id`, `nom`, `email`, `password`, `code`, `dateInscription`, `secret`) VALUES
+(5, 'Montlhery\r\n', 'montlhery.autoecole.narbonne@gmail.com', '$2y$14$39P5e95DGHn..NAVekF44eoIecrBU9fyVon2bt/IEl9ckZLwWPn9C', 3959453, '2021-03-25 09:38:33', '$2y$14$JWVnCIiqJjBamD2Xr46gFeNiyXAah6ui8fU/VRAD54i39JNe7D7TO'),
+(6, 'admin', 'admin', '$2y$14$SH1NCpff4usAtKJRZkDXTOx6o0rA/NA07RSHP9ljsXHK.WinRxn2G', 0, '2021-03-26 11:06:15', '');
 
 -- --------------------------------------------------------
 
@@ -56,8 +56,10 @@ CREATE TABLE `news` (
   `id` int NOT NULL,
   `auteur` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `titre` varchar(40) COLLATE utf8mb4_bin NOT NULL,
+  `lien` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
   `image` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `text` text COLLATE utf8mb4_bin NOT NULL,
+  `sommaire` text COLLATE utf8mb4_bin NOT NULL,
+  `text` text CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `dateCreation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
@@ -65,12 +67,8 @@ CREATE TABLE `news` (
 -- Déchargement des données de la table `news`
 --
 
-INSERT INTO `news` (`id`, `auteur`, `titre`, `image`, `text`, `dateCreation`) VALUES
-(32, 'Mikail', 'Carte', '1.png', 'test arceus meilleur pokemon', '2021-03-23 13:55:53'),
-(33, 'benji', 'logo', '300.png', 'Logo de la securiter routiere', '2021-03-23 14:16:13'),
-(34, 'Client', 'code de la route ', 'pexels-photomix-company-190448.jpg', 'Nouvelle règles en vigueur ', '2021-03-23 14:23:56'),
-(35, 'benji', 'poommme', 'michael-rivera-DypO_XgAE4Y-unsplash.jpg', 'YESSS TEST ', '2021-03-24 09:46:25'),
-(36, 'sandra', 'test', '8.png', 'pokemon', '2021-03-25 08:51:14');
+INSERT INTO `news` (`id`, `auteur`, `titre`, `lien`, `image`, `sommaire`, `text`, `dateCreation`) VALUES
+(37, 'Montlhery', 'Nouvelles régles du permis en vigeur', 'https://www.rts.ch/info/suisse/11855334-quelles-nouvelles-regles-sur-les-routes-en-2021.html', 'online-3412473_1920.jpg', 'Dès le 1er janvier 2021, plusieurs nouvelles dispositions de la circulation routière entreront en vigueur et impacteront autant les automobilistes que les cyclistes ou les piétons. Tour d\'horizon des principaux changements.', 'Sur l\'autoroute\r\nCouloirs de secours\r\n\r\nPour faciliter l\'accès de véhicules d\'intervention circulant avec les gyrophares, les automobilistes devront spontanément créer un couloir de secours au milieu des voies, sans empiéter sur la bande d\'arrêt d\'urgence. Il faudra serrer au plus proche du bord de la chaussée dans les tunnels.\r\n\r\nSur une autoroute à trois voies, les véhicules au centre et à droite devront serrer à droite et ceux sur la voie de gauche serreront à gauche; cela dégagera un espace suffisant pour le passage des véhicules d\'urgence.', '2021-03-29 08:27:33');
 
 --
 -- Index pour les tables déchargées
@@ -96,13 +94,13 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT pour la table `adminUser`
 --
 ALTER TABLE `adminUser`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
