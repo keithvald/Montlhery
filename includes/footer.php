@@ -88,18 +88,16 @@
 				</div>
 			</div>
 		</div>
-		<div class="admin">
-			<a class="btn btn-outline-info" href="admin/connexion.php" target="" rel="noopener noreferrer">Admin</a>
-		</div>
 		<div class="row copyright justify-content-center px-1">
-			Site hébergé par inheo - créé par Simplon - copyright 2021 - <a href="code/mentions.php" class="a-mentions"
-				aria-label="Mentions légales">Mentions légales</a>
+			<p class="small text-center">Site hébergé par inheo - créé par Simplon - copyright 2021 - <a href="code/mentions.php"
+					class="a-mentions" aria-label="Mentions légales">Mentions légales</a></p>
 		</div>
 	</div>
 
 </footer>
 
-<!-- Optional JavaScript; choose one of the two! -->
+<!-- bootstrap js -->
+<script src="assets/js/js.js"></script>
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 <script src="assets/js/jquery-3.5.1.slim.min.js"></script>

@@ -1,23 +1,30 @@
 var mymap = L.map('map').setView([43.18711366554758, 3.0071415211895802], 13);
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+L.tileLayer(
+  'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
+  {
+    attribution:
+      'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: 'pk.eyJ1Ijoia2VpdGh2YWxkIiwiYSI6ImNrbW9zNWticjEycjgyb216Zm04cWE4cWYifQ.j6szHWcCi8pbMqSZmAsIcg'
-}).addTo(mymap); 
+    accessToken:
+      'pk.eyJ1IjoibW9udGxoZXJ5IiwiYSI6ImNrbXVqbWUzcDB3M2IycG13bDQ1NHlqaGYifQ.6W4rg1tci7YdKr_z58QS4w',
+  }
+).addTo(mymap);
 
 // Pliage 31
 var marker = L.marker([43.18711366554758, 3.0071415211895802]).addTo(mymap);
-marker.bindPopup("Auto-école Montlhery <br> 8 Rue Ancienne Porte de Béziers, 11100 Narbonne")
+marker.bindPopup(
+  'Auto-école Montlhery <br> 8 Rue Ancienne Porte de Béziers, 11100 Narbonne'
+);
 
- $(function () {
-  $("#mdb-lightbox-ui0").load("mdb-addons/mdb-lightbox-ui.html");
-   $("#mdb-lightbox-ui1").load("mdb-addons/mdb-lightbox-ui.html");
-   $("#mdb-lightbox-ui2").load("mdb-addons/mdb-lightbox-ui.html");
-   $("#mdb-lightbox-ui3").load("mdb-addons/mdb-lightbox-ui.html");
+$(function () {
+  $('#mdb-lightbox-ui0').load('mdb-addons/mdb-lightbox-ui.html');
+  $('#mdb-lightbox-ui1').load('mdb-addons/mdb-lightbox-ui.html');
+  $('#mdb-lightbox-ui2').load('mdb-addons/mdb-lightbox-ui.html');
+  $('#mdb-lightbox-ui3').load('mdb-addons/mdb-lightbox-ui.html');
 });
 
 window.onscroll = function () {
@@ -61,4 +68,3 @@ document.querySelectorAll('a[href^="#ancre"]').forEach((anchor) => {
     });
   });
 });
-

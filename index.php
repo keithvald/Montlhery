@@ -1,7 +1,7 @@
 <?php include 'includes/header.php'; ?>
 <!-- Carousel -->
 
-<div id="carouselControls" class="carousel slide" data-ride="carousel">
+<div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
 	<div class="carousel-inner">
 		<!--section première image-->
 		<div class="carousel-item active">
@@ -39,15 +39,16 @@
 	</div>
 	<!--Flèches précédents et suivants-->
 
-	<a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev" aria-label="Navigation diapo left">
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">Précédent</span>
-	</a>
-	<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next" aria-label="Navigation diapo right">
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
 		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">Suivant</span>
-	</a>
+		<span class="visually-hidden">Next</span>
+	</button>
 </div>
+
 <!--Permis-->
 <div class="container-permis section-permis">
 	<div class="row">
@@ -120,7 +121,7 @@
 		setlocale(LC_TIME, 'fr_FR.UTF-8');
 		$date = ucfirst(strftime("%A %e %B %Y %T", strtotime($news['dateCreation']))) ;
 		?>
-		<div class="col-4">
+		<div class="col-md-6">
 			<div class="card">
 				<div class="row g-0">
 					<div class="col-4 actu-img-container">
@@ -135,7 +136,33 @@
 							<div class="mb-1 text-muted small"><?= $date; ?></div>
 							<p class="card-text mb-5"><?= $news['sommaire']; ?></p>
 							<div class="row justify-content-between">
-								<a class="btn btn-outline-primary btn-sm" role="button" href="">Lire la suite</a>
+								<!-- Button trigger modal -->
+								<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+									data-bs-target="#exampleModal">
+									Lire plus
+								</button>
+
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+									aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel"><?= $news['titre']; ?></h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal"
+													aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<?= $news['text']; ?>
+											</div>
+											<div class="modal-footer">
+												<p><?= $date; ?></p>
+												<button type="button" class="btn btn-danger"
+													data-bs-dismiss="modal">Fermer</button>
+											</div>
+										</div>
+									</div>
+								</div>
 								<p class="card-text text-muted small">Auteur: <?= $news['auteur']; ?></p>
 							</div>
 						</div>
@@ -239,19 +266,19 @@
 					</div>
 					<div class="carousel-cell">
 						<div class="col">
-							<img src="assets/img/slider/sebastien.jpg" alt="sebastien" />
+							<img src="assets/img/slider/sebastien.webp" alt="sebastien" />
 							<p class="text-center custom-color">Sébastien</p>
 						</div>
 					</div>
 					<div class="carousel-cell">
 						<div class="col">
-							<img src="assets/img/slider/nicolas_.jpg" alt="nicolas" />
+							<img src="assets/img/slider/nicolas_.webp" alt="nicolas" />
 							<p class="text-center custom-color">Nicolas</p>
 						</div>
 					</div>
 					<div class="carousel-cell">
 						<div class="col">
-							<img src="assets/img/slider/gregory.jpg" alt="gregory" />
+							<img src="assets/img/slider/gregory.webp" alt="gregory" />
 							<p class="text-center custom-color">Gregory</p>
 						</div>
 					</div>
@@ -282,8 +309,9 @@
 				<img src="assets/img/illustrations/stats.webp" alt="picture" class="pictures" />
 			</div>
 			<h1>Taux de réussite</h1>
-			<p>En 2018, <span class="pourcentage">95%</span> des <strong>66 candidats</strong> ont réussi à obtenir le permis
-				motocyclettes !</p>
+			<p>En 2018, <span class="pourcentage">95%</span> des <strong>66 candidats</strong> ont réussi à obtenir le permis A2!
+			</p>
+			<p>Taux de réussite officiel 2018 permis A2 </p>
 			<p class="button-stats">
 				<a href="https://www.vroomvroom.fr/auto-ecoles/aude/narbonne/auto-ecole-montlhery" rel="noreferrer"
 					target="_blank" aria-label="Montlhery statistique info"><button class="button-info-stat"><img
