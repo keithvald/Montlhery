@@ -128,13 +128,15 @@
 					</div>
 					<div class="col-8 p-0">
 						<div class="card-body">
-							<h5 class="card-title mb-2"><?= $news['titre'] ?></h5>
-							<a class="fs-6 text-dark" href="#"><?= $news['lien']; ?></a>
-							<div class="mb-1 text-muted small"><?= $date ?></div>
-							<p class="card-text mb-5"><?= $news['sommaire'] ?></p>
+							<h5 class="card-title mb-2"><?= $news['titre']; ?></h5>
+							<a class="fs-6 btn btn-success p-0" href="<?= $news['lien']; ?>" target="_blank"
+								rel="noopener noreferrer">Lien
+								article</a>
+							<div class="mb-1 text-muted small"><?= $date; ?></div>
+							<p class="card-text mb-5"><?= $news['sommaire']; ?></p>
 							<div class="row justify-content-between">
 								<a class="btn btn-outline-primary btn-sm" role="button" href="">Lire la suite</a>
-								<p class="card-text text-muted small">Auteur: <?= $news['auteur'] ?></p>
+								<p class="card-text text-muted small">Auteur: <?= $news['auteur']; ?></p>
 							</div>
 						</div>
 					</div>

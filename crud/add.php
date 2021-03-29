@@ -53,8 +53,8 @@ if($_POST){
 
 	if (isset($auteur) && isset($titre) && isset($imageVerification) && isset($text)){
 		require_once('connect.php');
-		$sql = "INSERT INTO `news` (`auteur`, `titre`, `lien`, `image`,`sommaire`, `text`)
-		VALUES (:newsAuteur, :newsTitre, `:newsLien` :newsImage, :newsSommaire, :newsText);";
+		$sql = "INSERT INTO `news` (`auteur`, `titre`, `lien`, `image`, `sommaire`, `text`)
+		VALUES (:newsAuteur, :newsTitre, :newsLien, :newsImage, :newsSommaire, :newsText);";
 
 		$query = $db->prepare($sql);
 		$query->bindValue(':newsAuteur', $auteur, PDO::PARAM_STR);
@@ -62,7 +62,7 @@ if($_POST){
 		$query->bindValue(':newsLien', $lien, PDO::PARAM_STR_CHAR);
 		$query->bindValue(':newsImage', $filename, PDO::PARAM_STR);
 		$query->bindValue(':newsText', $text, PDO::PARAM_STR);
-		$query->bindValue(':newsSommaire', $text, PDO::PARAM_STR);
+		$query->bindValue(':newsSommaire', $sommaire, PDO::PARAM_STR);
 		$query->execute();
 		
 		$_SESSION['message'] = "News ajouté";

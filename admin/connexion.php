@@ -86,9 +86,9 @@ if(!empty($_SESSION['message'])){
 				</div>
 
 				<div class="col">
-					<p class="small d-inline-block form-label mb-1">Mots de passe oublier? Ou Changer de mots de passe? </p>
+					<p class="small d-inline-block form-label mb-1">Mot de passe oublier? Ou Changer de mot de passe? </p>
 					<a href="change.php" class="btn btn-outline-dark form-control m-1" target="" rel="noopener noreferrer">
-						Changer de mots de passe
+						Changer de mot de passe
 					</a>
 				</div>
 			</div>

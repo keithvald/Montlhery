@@ -55,7 +55,7 @@ if($_POST){
 
 require_once('../includes/header-page.php');
 ?>
-<h1><strong>Recuperation mots de passe</strong></h1>
+<h1><strong>Recuperation mot de passe</strong></h1>
 <?php
 if(!empty($_SESSION['erreur'])){
 ?>
@@ -77,13 +77,13 @@ $_SESSION['message'] ="";
 <div class="row justify-content-center">
 	<form action="" method="POST" class="col-10">
 		<fieldset>
-			<legend>Verification Utilisateur</legend>
+			<legend>Vérification Utilisateur</legend>
 
 			<label for="email" class="form-label"><b>Email</b></label>
 			<input type="text" class="form-control mb-3" placeholder="email" name="email" required>
 
 			<label for="secret" class="form-label"><b>Clef Secrete</b></label>
-			<input type="text" class="form-control mb-3" placeholder="clef secrete" name="secret" required>
+			<input type="password" class="form-control mb-3" placeholder="clef secrete" name="secret" required>
 
 			<div class="row justify-content-between">
 				<div class="col">

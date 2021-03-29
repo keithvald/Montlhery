@@ -1,6 +1,31 @@
 <?php
 session_start();
 
+if(isset($_GET['id']) && !empty($_GET['id'])){
+	require_once('connect.php');
+	// on clean la valeur d'id
+	$id = strip_tags($_GET['id']);
+
+	$sql = 'SELECT * FROM `news` WHERE `id` = :id;';
+
+	// on prépare la requête
+	$query = $db->prepare($sql);
+
+	// on "accroche" les paramètres (id) et 
+	$query->bindValue(':id', $id, PDO::PARAM_INT);
+	$query->execute();
+	// on fetch un resultat fetch suffit
+	$result = $query->fetch();
+
+	if(!$result){
+		$_SESSION['erreur'] = "Cette id n'existe pas";
+		header('location:main.php');
+	}
+}else{
+	$_SESSION['erreur'] = "Url invalid";
+	header('location:main.php');
+};
+
 if($_POST){
 	if (isset($_POST['id']) && !empty($_POST['id'])){
 		$id = strip_tags($_POST['id']);
@@ -70,38 +95,13 @@ if($_POST){
 		$query->bindValue(':newsLien', $lien, PDO::PARAM_STR_CHAR);
 		$query->bindValue(':newsImage', $filename, PDO::PARAM_STR);
 		$query->bindValue(':newsText', $text, PDO::PARAM_STR);
-		$query->bindValue(':newsSommaire', $text, PDO::PARAM_STR);
+		$query->bindValue(':newsSommaire', $sommaire, PDO::PARAM_STR);
 		$query->execute();
 		
 		$_SESSION['message'] = "News modifié";
 		require_once('close.php');
 		header('location: main.php');
-	}
-};
-
-if(isset($_GET['id']) && !empty($_GET['id'])){
-	require_once('connect.php');
-	// on clean la valeur d'id
-	$id = strip_tags($_GET['id']);
-
-	$sql = 'SELECT * FROM `news` WHERE `id` = :id;';
-
-	// on prépare la requête
-	$query = $db->prepare($sql);
-
-	// on "accroche" les paramètres (id) et 
-	$query->bindValue(':id', $id, PDO::PARAM_INT);
-	$query->execute();
-	// on fetch un resultat fetch suffit
-	$result = $query->fetch();
-
-	if(!$result){
-		$_SESSION['erreur'] = "Cette id n'existe pas";
-		header('location:main.php');
-	}
-}else{
-	$_SESSION['erreur'] = "Url invalid";
-	header('location:main.php');
+	};
 };
 ?>
 <!DOCTYPE html>
@@ -133,7 +133,17 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 					</div>
 					<?php
 					$_SESSION['erreur'] ="";
-					}
+					};
+					if(!empty($_SESSION['message'])){
+						?>
+					<div class="alert alert-success" role="alert">
+						<?= 
+							$_SESSION['message'];
+							?>
+					</div>
+					<?php
+						$_SESSION['message'] ="";
+						}
 					?>
 					<h1>Modifier news</h1>
 					<form action="" method="post" enctype="multipart/form-data">

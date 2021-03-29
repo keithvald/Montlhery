@@ -42,7 +42,7 @@ if($_POST){
 
 require_once('../includes/header-page.php');
 ?>
-<h1><strong>Recuperation mots de passe</strong></h1>
+<h1><strong>Recuperation mot de passe</strong></h1>
 <?php
 if(!empty($_SESSION['erreur'])){
 ?>
@@ -64,15 +64,15 @@ $_SESSION['message'] ="";
 <div class="row justify-content-center">
 	<form action="" method="POST" class="col-10">
 		<fieldset>
-			<legend>Code Verification</legend>
+			<legend>Code Vérification</legend>
 
 			<label for="code" class="form-label"><b>Code</b></label>
 			<input type="number" class="form-control mb-3" placeholder="code" name="code" required>
 
 			<div class="row justify-content-between">
 				<div class="col">
-					<label for="submit" class="small form-label mb-1">Connexion</label>
-					<input class="btn  btn-success form-control m-1" type="submit" value='Connexion' name="submit">
+					<label for="submit" class="small form-label mb-1">Vérifier</label>
+					<input class="btn  btn-success form-control m-1" type="submit" value='Vérifier' name="submit">
 				</div>
 			</div>
 		</fieldset>

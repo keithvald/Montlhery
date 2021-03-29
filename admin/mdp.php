@@ -50,7 +50,7 @@ if($_POST){
 
 require_once('../includes/header-page.php');
 ?>
-<h1><strong>Recuperation mots de passe</strong></h1>
+<h1><strong>Recuperation mot de passe</strong></h1>
 <?php
 if(!empty($_SESSION['erreur'])){
 ?>
@@ -72,18 +72,18 @@ $_SESSION['message'] ="";
 <div class="row justify-content-center">
 	<form action="" method="POST" class="col-10">
 		<fieldset>
-			<legend>Code Verification</legend>
+			<legend>Nouveaux mot de passe</legend>
 
-			<label for="mdp" class="form-label"><b>Nouveaux mots de passe</b></label>
-			<input type="password" class="form-control mb-3" placeholder="Mots de passe" name="mdp" required>
+			<label for="mdp" class="form-label"><b>Nouveaux mot de passe</b></label>
+			<input type="password" class="form-control mb-3" placeholder="Mot de passe" name="mdp" required>
 
-			<label for="reapeatmdp" class="form-label"><b>Repeter le mots de passe</b></label>
-			<input type="password" class="form-control mb-3" placeholder="Mots de passe" name="reapeatmdp" required>
+			<label for="reapeatmdp" class="form-label"><b>Repeter le mot de passe</b></label>
+			<input type="password" class="form-control mb-3" placeholder="Mot de passe" name="reapeatmdp" required>
 
 			<div class="row justify-content-between">
 				<div class="col">
-					<label for="submit" class="small form-label mb-1">Connexion</label>
-					<input class="btn  btn-success form-control m-1" type="submit" value='Connexion' name="submit">
+					<label for="submit" class="small form-label mb-1">Changer le mot de passe</label>
+					<input class="btn  btn-success form-control m-1" type="submit" value='Changer le mot de passe' name="submit">
 				</div>
 			</div>
 		</fieldset>

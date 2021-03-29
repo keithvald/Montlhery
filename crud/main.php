@@ -34,7 +34,7 @@ require_once('select.php');
 					</div>
 					<?php
 					$_SESSION['erreur'] ="";
-					}
+					};
 					if(!empty($_SESSION['message'])){
 						?>
 					<div class="alert alert-success" role="alert">
@@ -47,8 +47,6 @@ require_once('select.php');
 						}
 					?>
 					<h1>Listes des news</h1>
-					<a href="gestion.php" class="btn btn-outline-secondary" target="" rel="noopener noreferrer">Gestion
-						Mail</a>
 					<table class="table">
 						<thead>
 							<th>ID</th>
