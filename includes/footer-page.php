@@ -89,7 +89,7 @@
 			</div>
 		</div>
 		<div class="row copyright justify-content-center px-1">
-			<p class="small text-center">Site hébergé par inheo - créé par Simplon - copyright 2021 - <a
+			<p class="small text-center">Site hébergé par planethoster - créé par BACAM dev web - copyright 2021 - <a
 					href="../code/mentions.php" class="a-mentions" aria-label="Mentions légales">Mentions légales</a></p>
 		</div>
 	</div>

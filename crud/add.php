@@ -131,7 +131,7 @@ if($_POST){
 
 							<div class="col-md-6">
 								<label for="lien" class="form-label">Lien article</label>
-								<input type="text" name="lien" class="form-control" placeholder="Non obligatoir">
+								<input type="text" name="lien" class="form-control" placeholder="Non obligatoire">
 							</div>
 
 							<div class="col-md-6">

@@ -155,8 +155,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
           $mail->addAddress('montlhery.autoecole.narbonne@gmail.com'); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
       
           $mail->isHTML(true);
-          $mail->Subject = 'Message Received (Contact Page)';
-          $mail->Body = "<h2>Prenom: $name </h2> <h3> Email: $email<br /> Ville : $postal, $city  <br /> <br />Objets : $objets <br /><br />  Message : </h3> <p>$message </p>";
+          $mail->Subject = $objets;
+          $mail->Body = "<h2>Prenom: $name </h2> <h3> Email: $email<br /> Ville : $postal, $city  <br /> <br />Message : </h3> <p>$message </p>";
       
           $mail->send();
           $alert = '<div class="alert-success mb-5">

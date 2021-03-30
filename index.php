@@ -122,7 +122,7 @@
 		$date = ucfirst(strftime("%A %e %B %Y %T", strtotime($news['dateCreation']))) ;
 		?>
 		<div class="col-md-6">
-			<div class="card">
+			<div class="card h-100">
 				<div class="row g-0">
 					<div class="col-4 actu-img-container">
 						<img src="assets/img/crud/<?= $news['image'] ?>" alt="<?= $news['image'] ?>">
@@ -130,7 +130,7 @@
 					<div class="col-8 p-0">
 						<div class="card-body">
 							<h5 class="card-title mb-2"><?= $news['titre']; ?></h5>
-							<a class="fs-6 btn btn-success p-0" href="<?= $news['lien']; ?>" target="_blank"
+							<a class="fs-6 btn button-slider p-0 text-white" href="<?= $news['lien']; ?>" target="_blank"
 								rel="noopener noreferrer">Lien
 								article</a>
 							<div class="mb-1 text-muted small"><?= $date; ?></div>
