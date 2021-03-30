@@ -2,7 +2,7 @@
 <?php include '../includes/header-page.php'; ?>
 
 <div class="landing-page-image-container">
-	<img src="../assets/img/permis/8.webp" alt="Conduite Accompagné photo" />
+	<img src="../assets/img/permis/11.webp" alt="Conduite Accompagné photo" />
 </div>
 
 <!--Section JUMBOTRON-->
@@ -91,7 +91,8 @@
 				aucun frais supplémentaire, le paiement de la formation au permis de conduire. Ce dispositif permet aux jeunes de
 				<strong class="c-blue">15 à 25 ans</strong>, selon certaines conditions, de lisser le coût de la formation à
 				<strong class="c-blue">la catégorie A et B du permis de conduire</strong> à raison d'un euro par jour. Il s'agit
-				d'un prêt à taux zéro dont les intérêts sont pris en charge par l’État.</p>
+				d'un prêt à taux zéro dont les intérêts sont pris en charge par l’État.
+			</p>
 			<div id="mon-collapse" class="collapse">
 				<p>Pour bénéficier du permis à 1€ par jour, il faut faire un <strong class="c-blue">contrat de formation "permis
 						1€ par jour" à l'auto-école</strong> puis valider la demande auprès de sa banque./p>

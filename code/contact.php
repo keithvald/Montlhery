@@ -46,7 +46,7 @@
 			<!--alert messages end-->
 			<div class="contact-section">
 				<div class="contact-form">
-					<form class="contact" action="" method="POST">
+					<form id="truc" class="contact" action="" method="POST">
 						<input type="text" name="name" class="text-box" placeholder="Prénom*" maxlength="20" required />
 						<input type="email" name="email" class="text-box" placeholder="Email*" maxlength="40" required />
 						<input type="number" name="postal" class="text-box" placeholder="Code postal*" required maxlength="10" />
@@ -54,9 +54,12 @@
 						<input type="text" name="objets" class="text-box w-100" placeholder="Objet*" required maxlength="40" />
 						<textarea name="message" id="" cols="30" rows="10" placeholder="Message*" required
 							maxlength="1500"></textarea>
-						<input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
 
-						<input type="submit" name="submit" class="send-btn" value="Envoyer" />
+
+						<button class="g-recaptcha" data-sitekey="6LcjD5UaAAAAAOonMZp9XNtAnYkWYOWxHuaViPzE"
+							data-callback='onSubmit' data-action='submit'>Submit
+						</button>
+
 						<p class="low text-left">
 							<span class="font-weight-bold">Tous les champs (*) sont obligatoires.<br /></span>
 							Aucune donnée personnelle n’est conservée par notre site via le formulaire de contact.
@@ -71,17 +74,12 @@
 
 <!-- Captcha -->
 
-<script src="https://www.google.com/recaptcha/api.js?render=6Lex4EYaAAAAANYJIq6KZ5hxd4yKn44d-YiWu8Wb"></script>
+
 
 <script>
-grecaptcha.ready(function() {
-	grecaptcha.execute('6LcjD5UaAAAAAOonMZp9XNtAnYkWYOWxHuaViPzE', {
-		action: 'submit'
-	}).then(function(token) {
-		document.getElementById('recaptchaResponse').value = token;
-		// Add your logic to submit to your backend server here.
-	});
-});
+function onSubmit(token) {
+	document.getElementById("truc").submit();
+}
 </script>
 
 

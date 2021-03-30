@@ -122,7 +122,7 @@
 		$date = ucfirst(strftime("%A %e %B %Y %T", strtotime($news['dateCreation']))) ;
 		?>
 		<div class="col-md-6">
-			<div class="card h-100">
+			<div class="card d-flex justify-content-center align-middle h-100">
 				<div class="row g-0">
 					<div class="col-4 actu-img-container">
 						<img src="assets/img/crud/<?= $news['image'] ?>" alt="<?= $news['image'] ?>">
@@ -138,24 +138,27 @@
 							<div class="row justify-content-between">
 								<!-- Button trigger modal -->
 								<button type="button" class="btn btn-primary" data-bs-toggle="modal"
-									data-bs-target="#exampleModal">
+									data-bs-target="#<?= strtok($news['titre'], " ");  ?>">
 									Lire plus
 								</button>
 
 								<!-- Modal -->
-								<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-									aria-hidden="true">
+								<div class="modal fade text-white" id="<?= strtok($news['titre'], " "); ?>" tabindex="-1"
+									aria-labelledby="exampleModalLabel" aria-hidden="true">
 									<div class="modal-dialog">
 										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel"><?= $news['titre']; ?></h5>
+											<div class="modal-header mb-4">
+												<h4 class="modal-title" id="exampleModalLabel"><?= $news['titre']; ?>
+												</h4>
 												<button type="button" class="btn-close" data-bs-dismiss="modal"
 													aria-label="Close"></button>
 											</div>
 											<div class="modal-body">
 												<?= $news['text']; ?>
 											</div>
-											<div class="modal-footer">
+											<div class="modal-footer mt-4 d-flex justify-content-between">
+												<a href="<?= $news['lien']; ?>" class="text-white btn btn-outline-info"
+													target="_blank" rel="noopener noreferrer">Lien article</a>
 												<p><?= $date; ?></p>
 												<button type="button" class="btn btn-danger"
 													data-bs-dismiss="modal">Fermer</button>

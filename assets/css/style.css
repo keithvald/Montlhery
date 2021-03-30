@@ -181,6 +181,31 @@ button.interest:hover {
   align-items: center;
 }
 
+/* MODAL */
+
+.modal-dialog {
+  max-width: 65%;
+}
+
+.modal-content {
+  background: linear-gradient(
+    to right bottom,
+    hsl(236, 50%, 50%),
+    hsl(195, 50%, 50%)
+  );
+  width: 100%;
+}
+.modal button:first-child {
+  border: black 2px solid;
+  border-radius: 50%;
+}
+.modal a {
+  border-radius: 100rem;
+}
+.modal a:hover {
+  transform: translateY(-0.2rem);
+}
+
 /*------Section : Mieux préparer son code------*/
 
 div.container-fluid.section-code {

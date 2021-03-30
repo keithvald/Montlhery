@@ -69,6 +69,8 @@
 		<!-- -----------------_Awesome font_---------------- -->
 		<script src="https://kit.fontawesome.com/c70a4c5665.js" crossorigin="anonymous"></script>
 
+		<script src="https://www.google.com/recaptcha/api.js"></script>
+
 
 	</head>
 
