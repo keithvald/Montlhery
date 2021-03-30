@@ -1,4 +1,7 @@
-var mymap = L.map('map').setView([43.18711366554758, 3.0071415211895802], 13);
+var mymap = L.map('map', { scrollWheelZoom: false }).setView(
+  [43.18711366554758, 3.0071415211895802],
+  14.7
+);
 
 L.tileLayer(
   'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
@@ -25,6 +28,14 @@ $(function () {
   $('#mdb-lightbox-ui1').load('mdb-addons/mdb-lightbox-ui.html');
   $('#mdb-lightbox-ui2').load('mdb-addons/mdb-lightbox-ui.html');
   $('#mdb-lightbox-ui3').load('mdb-addons/mdb-lightbox-ui.html');
+});
+
+mymap.on('click', function () {
+  if (mymap.scrollWheelZoom.enabled()) {
+    mymap.scrollWheelZoom.disable();
+  } else {
+    mymap.scrollWheelZoom.enable();
+  }
 });
 
 window.onscroll = function () {

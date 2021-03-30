@@ -41,7 +41,7 @@
 <div class="bg-custom-grey">
 	<div class="row p-8">
 		<div class="col-12">
-			<h1 class="text-left">Les falicités de paiement</h1>
+			<h1 class="text-left">Les facilités de paiement</h1>
 		</div>
 		<div class="col-12">
 			Pour l'ensemble de permis nous proposons des facilités de paiement.
